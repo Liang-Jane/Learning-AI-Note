@@ -1,6 +1,6 @@
 # AI学习笔记
 
-## 首先自学python基础——常用库——机器学习——深度学习
+## 顺序：自学python基础——常用库——机器学习——深度学习
 
 ### 25.07.15安装合适软件记录学习笔记（Github+Typora）
 
@@ -101,7 +101,7 @@
 
 4. **远程连接GitHub仓库：**用行命令打开笔记文件路径后输入：`git remote add origin git@github.com:Liang-Jane/Learning-AI-Note.git`  别的github仓库记得改仓库路径
 
-5. **推送笔记内容：**`git push -u origin main
+5. **推送笔记内容：**`git push -u origin main`
 
 ## 2. 学习Markdown语法，并整理这两天的学习笔记
 
