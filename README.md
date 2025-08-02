@@ -1,6 +1,6 @@
 # AI学习笔记
 
-## 顺序：自学python基础——常用库——机器学习——深度学习
+## 顺序：自学python基础——常用库——深度学习——机器学习
 
 ### 25.07.15安装合适软件记录学习笔记（Github+Typora）
 
@@ -101,7 +101,19 @@
 
 4. **远程连接GitHub仓库：**用行命令打开笔记文件路径后输入：`git remote add origin git@github.com:Liang-Jane/Learning-AI-Note.git`  别的github仓库记得改仓库路径
 
-5. **推送笔记内容：**`git push -u origin main`
+5. 【可选】**若在关联远程仓库的时候报错：**error: src refspec main does not match any error: failed to push some refs to ...
+
+   这个问题是因为本地仓库的分支名和远程仓库的分支名不匹配导致的（GitHub 默认主分支现在是 `main`，但你的本地分支可能是 `master`）。以下是 **详细解决方法**：
+
+   ```
+   # 1. 将本地分支改名为 main（如果当前是 master）
+   git branch -m master main
+   
+   # 2. 重新关联远程仓库（强制推送）-f参数仅在首次推送空仓库时安全使用（不会丢失代码）
+   git push -u -f origin main
+   ```
+
+6. **日常推送笔记内容：**`git push -u origin main`
 
 ## 2. 学习Markdown语法，并整理这两天的学习笔记
 
