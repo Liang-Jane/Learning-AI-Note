@@ -109,8 +109,8 @@ for x in range(1,10):
   while循环嵌套的基本形式为：
 
   ```
-  - while 判断条件：
-        while 判断条件：
+  while 判断条件：
+  	while 判断条件：
             循环语句
   ```
 
@@ -152,7 +152,7 @@ for x in range(1,10):
    result = isinstance('python',Iterable)
    print(result)
    result = isinstance(213,Iterable)
-   print(result
+   print(result)
    ```
 
    结果为：
@@ -178,18 +178,26 @@ for x in range(1,10):
    print(result)
    ```
 
+   结果为：
+
+   False
+
+   False
+
+   True
+
    #### 定义迭代器
 
-   当自己定义迭代器时，需要定义一个类（class）。类里面包含一个iter()函数，这个函数能够返回一个带next()方法的对象。例如：
+   当自己定义迭代器时，需要定义一个类（class）。类里面包含一个`__iter__()`函数，这个函数能够返回一个带`__next__()`方法的对象。例如：
 
    ```
    class MyIterable:
-       def iter(self):
+       def __iter__(self):
            return MyIterator()
    class MyIterator:
        def init(self):
            self.num = 0
-       def next(self):
+       def __next__(self):
            self.num += 1
            if self.num >= 10:
                raise StopIteration
@@ -198,7 +206,7 @@ for x in range(1,10):
 
    #### 复制迭代器
 
-   迭代器当一次迭代完毕后就结束了，在此调用便会引发StopIteration异常。
+   迭代器当一次迭代完毕后就结束了，再次调用便会引发StopIteration异常。
 
    如果想要将迭代器保存起来，可以使用复制的方法:`copy.deepcopy():x = copy.deepcopy(y)`，不可使用赋值的方法，这样是不起作用的。
 
@@ -222,9 +230,9 @@ for x in range(1,10):
   ```
   name = 'choose'
   #判断变量name是否为'choose'
-  if name == 'choose'
+  if name == 'choose':
       print("条件成立")
-  else
+  else:
       print("条件不成立")
   ```
 
