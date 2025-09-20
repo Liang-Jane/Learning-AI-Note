@@ -113,7 +113,16 @@
    git push -u -f origin main
    ```
 
-6. **日常推送笔记内容：**`git push -u origin main`
+6. **从头推送笔记内容：**`git push -u origin main`
+
+7. **日常推送笔记：**
+
+   1. 先上传本地暂存：` git add .`
+   2. 再上传本地git仓库：`git commit -m "修改日志备注"`
+   3. 最后上传远程github：`git push origin main`
+
+
+
 
 ## 2. 学习Markdown语法，并整理这两天的学习笔记
 
